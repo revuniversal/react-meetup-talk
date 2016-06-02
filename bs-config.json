@@ -1,0 +1,10 @@
+{
+  "port": 8000,
+  "files": [
+    "./dest/*.{html,htm,css,js}",
+    "./dest/**/*.{html,htm,css,js}"
+  ],
+  "server": {
+    "baseDir": "./dest"
+  }
+}
