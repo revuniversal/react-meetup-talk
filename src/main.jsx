@@ -6,5 +6,5 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 ReactDOM.render(
-    <App title="Just React" />
+    <App title="Just React" />,
     document.getElementById('AppHost'));
