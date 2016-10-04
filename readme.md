@@ -4,7 +4,7 @@
 
 ### Dependencies
 
-- node 4.*
+- node 4.*+
 - npm 3.*
 
 ### Usage
