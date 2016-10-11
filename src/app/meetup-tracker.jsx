@@ -16,10 +16,11 @@ class MeetupTracker extends React.Component {
   }
 
   addMeetup(meetup) {
-    meetup.id = this.state.nextId++;
-    
+    meetup.id = this.state.nextId
+
     this.setState({ 
-      meetups: [...this.state.meetups, meetup] 
+      meetups: [...this.state.meetups, meetup],
+      nextId: this.state.nextId + 1
     })
   }
 
