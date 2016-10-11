@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { App } from './app/app'
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MeetupTracker from './app/meetup-tracker'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 injectTapEventPlugin();
 
 ReactDOM.render(
-    <App title="Just React" />,
-    document.getElementById('AppHost'));
+    <MeetupTracker />,
+    document.getElementById('AppHost'))
