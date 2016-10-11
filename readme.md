@@ -1,6 +1,6 @@
-# Just React
+# React Meetup Talk
 
-[![Join the chat at https://gitter.im/revuniversal/just-react](https://badges.gitter.im/revuniversal/just-react.svg)](https://gitter.im/revuniversal/just-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is the code that was written before and during the "I love react" talk.
 
 ### Dependencies
 
