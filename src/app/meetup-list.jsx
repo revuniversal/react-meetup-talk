@@ -1,5 +1,24 @@
 import React from 'react'
 
+function renderMeetups(meetups) {
+  if (meetups.length) {
+    return meetups.map(x => (
+        <tr key={x.id}>
+          <td>{x.date}</td>
+          <td>{x.location}</td>
+        </tr>
+    ))
+  } else {
+    return (
+      <tr>
+        <td colSpan="2">
+          There are no meetups registered yet.
+        </td>
+      </tr>
+    )
+  }
+}
+
 const MeetupList = ({meetups}) => (
   <table className="table table-striped">
     <thead>
@@ -8,25 +27,8 @@ const MeetupList = ({meetups}) => (
         <th>Location</th>
       </tr>
     </thead>
-    
     <tbody>
-      { 
-        meetups.map(x => (
-          <tr key={x.id}>
-            <td>{x.date}</td>
-            <td>{x.location}</td>
-          </tr>
-        ))
-      }
-      
-      {
-        !meetups.length &&
-        <tr>
-          <td colSpan="2">
-            There are no meetups registered yet.
-          </td>
-        </tr>
-      }
+      {renderMeetups(meetups)}
     </tbody>
   </table>
 )

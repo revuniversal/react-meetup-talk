@@ -1,7 +1,23 @@
 import React from 'react'
 
-const AddMeetup = ({onSubmit}) => (
-  <form onSubmit={onSubmit} action="#" method="post">
+function onSubmit(callback) {
+  return (event) => {
+    const form = event.target;
+    const meetup = {
+      date: form.date.value,
+      location: form.location.value
+    }
+
+    callback(meetup);
+
+    event.preventDefault()
+    form.date.value = ''
+    form.location.value = ''
+  }
+}
+
+const AddMeetup = ({callback}) => (
+  <form onSubmit={onSubmit(callback)} action="#" method="post">
     <div className="row">
       <div className="col-sm-6">
         <input
