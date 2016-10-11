@@ -15,21 +15,12 @@ class MeetupTracker extends React.Component {
     this.addMeetup = this.addMeetup.bind(this)
   }
 
-  addMeetup(event) {
-    const form = event.target
-    const meetup = {
-      id: this.state.nextId++,
-      date: form.date.value,
-      location: form.location.value
-    }
+  addMeetup(meetup) {
+    meetup.id = this.state.nextId++;
     
     this.setState({ 
       meetups: [...this.state.meetups, meetup] 
     })
-
-    event.preventDefault()
-    form.date.value = ''
-    form.location.value = ''
   }
 
   render() {
@@ -38,7 +29,7 @@ class MeetupTracker extends React.Component {
         <h1 className="page-header">Meetup Tracker</h1>
         
         <h3>Add a Meetup</h3>
-        <AddMeetup onSubmit={this.addMeetup}/>
+        <AddMeetup callback={this.addMeetup}/>
         
         <h3 style={{marginTop: '54px'}}>Meetups</h3>
         <MeetupList meetups={this.state.meetups}/>
