@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Footer = ({count}) => (
+const Footer = ({meetups}) => (
   <div>
-    There are {count} meetups
+    There are {meetups.length} meetups
   </div>
 )
 

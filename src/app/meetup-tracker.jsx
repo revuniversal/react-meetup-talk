@@ -43,7 +43,7 @@ class MeetupTracker extends React.Component {
         <h3 style={{marginTop: '54px'}}>Meetups</h3>
         <MeetupList meetups={this.state.meetups}/>
         
-        <Footer count={this.state.meetups.length} />
+        <Footer meetups={this.state.meetups} />
       </div>
     )
   }
